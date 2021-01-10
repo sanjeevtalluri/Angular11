@@ -1,0 +1,14 @@
+<input type="text" #name><br><br>
+<input type="number" #price><br><br>
+<button (click) = "addProducts(name.value,price.value)">Add Product</button><br><br>
+
+<table>
+  <tr>
+    <td>Name</td>
+     <td>Price</td>
+  </tr>
+  <tr *ngFor="let product of products | async">
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+  </tr>
+</table>

@@ -1,0 +1,22 @@
+<table align="center" cellpadding="10px" cellspacing="10" border="1">
+    <thead style="color: gray;">
+        <tr>
+            <td>Name</td>
+            <td>Capital</td>
+            <td>Region</td>
+            <td>Population</td>
+            <td>NativeName</td>
+            <td>Flag</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of response">
+            <td>{{obj.name}}</td>
+            <td>{{obj.capital}}</td>
+            <td>{{obj.region}}</td>
+            <td>{{obj.population}}</td>
+            <td>{{obj.nativeName}}</td>
+            <td><img width="100px" height="50px" src="{{obj.flag}}"></td>
+        </tr>
+    </tbody>
+</table>
